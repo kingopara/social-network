@@ -33,3 +33,32 @@ SO THAT my website can handle large amounts of unstructured data
 * WHEN I test API POST and DELETE routes in Insomnia Core
 
 `THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list`
+
+## Installation
+
+Run these commands to Install individual packages to use the app
+
+* `npm init -y`
+
+* `npm install express`
+
+* `npm install mongoose`
+
+OR run `npm install` to install all packages at once
+
+## Usage 
+
+## Credit
+This app was made with love and hardwork by Praise Opara
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+## Badges
+
+![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
+
+## Contributing
+
+![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)
