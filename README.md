@@ -3,7 +3,9 @@
 ## Description
 
 AS A social media startup
+
 I WANT an API for my social network that uses a NoSQL database
+
 SO THAT my website can handle large amounts of unstructured data
 
 ## Table of content
@@ -38,11 +40,11 @@ SO THAT my website can handle large amounts of unstructured data
 
 Run these commands to Install individual packages to use the app
 
-* `npm init -y`
+* `npm init -y` (node.js package)
 
-* `npm install express`
+* `npm install express` (express.js package)
 
-* `npm install mongoose`
+* `npm install mongoose` (mongoose package)
 
 OR run `npm install` to install all packages at once
 
