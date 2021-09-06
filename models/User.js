@@ -29,7 +29,19 @@ const UserSchema = new Schema({
         type: Date,
         default: Date.now
     }
+},
+{
+    toJSON: {
+        virtuals: true,
+    },
+    id: false
 });
+
+//virtual to retrieve user's friends
+UserSchema.virtual('friendCount').get(function() {
+    return this.friends.length;
+});
+
 
 // create the user model using the UserSchema
 const User = model('User', UserSchema);
