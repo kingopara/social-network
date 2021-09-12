@@ -23,6 +23,29 @@ const ThoughtController = {
             .catch(err => res.json(err));
     },
 
+    //get all thoughts
+    getAllThoughts(req, res) {
+        Thought.find({})
+            .then(dbUserdata => res.json(dbUserdata))
+            .catch(err => res.json(err));
+    },
+
+    //get single thought by id
+    getThoughtById({ params }, res) {
+        Thought.findOne({ _id: params.id })
+        .then(dbUserdata => {
+            if (!dbUserdata) {
+                res.status(404).json({ message: 'no user with this id found!' });
+                return;
+            }
+            res.json(dbUserdata);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(400).json(err);
+        });
+    },
+
     //create a reaction
     addReaction({ params, body }, res) {
         Thought.findOneAndUpdate(
@@ -49,6 +72,22 @@ const ThoughtController = {
         )
         .then(dbUserdata => res.json(dbUserdata))
         .catch(err => res.json(err));
+    },
+
+    //update thought
+    updateThought({ params, body }, res) {
+        Thought.findOneAndUpdate({ _id: params.id}, body, { new: true })
+        .then(dbUserdata => {
+            if (!dbUserdata) {
+                res.status(404).json({ message: 'no user with this id found!' });
+                return;
+            }
+            res.json(dbUserdata);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(400).json(err);
+        });
     },
 
     //remove thought
