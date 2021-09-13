@@ -9,6 +9,7 @@ I WANT an API for my social network that uses a NoSQL database
 SO THAT my website can handle large amounts of unstructured data
 
 ## Table of content
+* [link to walkthrough video](#video)
 * [Description](#description)
 * [Project Requirements](#projectrequirements)
 * [Installation](#installation)
@@ -17,6 +18,10 @@ SO THAT my website can handle large amounts of unstructured data
 * [License](#license)
 * [Badges](#Badges)
 * [Contributing](#contributing)
+
+## Link to walkthrough video
+
+[link to a walk-through video of how the app works](https://youtu.be/S-xDNt8uHD0)
 
 ## Project Requirements
 
@@ -49,6 +54,11 @@ Run these commands to Install individual packages to use the app
 OR run `npm install` to install all packages at once
 
 ## Usage 
+
+* At the root of the project , run `npm start` to start the server and link to database.
+* Navigate to insomnia core to perform `CRUD` on the `User` and `Thought Models`.
+* Create and Delete `Reactions` for the Thoughts and get the total counts of reactions a thought has.
+* Add `Friends` to the User and get the total counts of friends.
 
 ## Credit
 This app was made with love and hardwork by Praise Opara

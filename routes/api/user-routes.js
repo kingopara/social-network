@@ -20,12 +20,7 @@ router
     .route('/:id')
     .get(getUserById)
     .put(updateUser)
-    .delete(deleteUser);
-
-//add friend
-// router
-//     .route('/:userId/friends')
-    
+    .delete(deleteUser);  
 
 //remove friend
 router
